@@ -100,7 +100,7 @@ def sendAudio(chat_id, audio, lang, music, image=None):
        else:
            bot.sendAudio(chat_id, audio)
     except:
-       bot.sendMessage(chat_id, translate(lang, "An error has occured during sending song, please contact @An0nimia for explain the issue, thanks :)"))
+       bot.sendMessage(chat_id, translate(lang, "An error has occured during sending song, please contact @officialvirtualriot for explain the issue, thanks :)"))
     conn.close()
 def track(music, chat_id, lang, quality):
     global spo
@@ -142,7 +142,7 @@ def track(music, chat_id, lang, quality):
            except dwytsongs.TrackNotFound as error:
               bot.sendMessage(chat_id, translate(lang, str(error) + " :("))
         except:
-           bot.sendMessage(chat_id, translate(lang, "An error has occured during downloading song, please contact @An0nimia for explain the issue, thanks :)"))
+           bot.sendMessage(chat_id, translate(lang, "An error has occured during downloading song, please contact @officialvirtualriot for explain the issue, thanks :)"))
            conn.close()
            return
         conn.close()
@@ -323,7 +323,7 @@ def Link(music, chat_id, lang, quality, msg):
     except deezloader.AlbumNotFound:
        bot.sendMessage(chat_id, translate(lang, "Album not found :("))
     except:
-       bot.sendMessage(chat_id, translate(lang, "An error has occurred while sending the song. For more information, please contact @An0nimia Thanks :)"))
+       bot.sendMessage(chat_id, translate(lang, "An error has occurred while sending the song. For more information, please contact @officialvirtualriot Thanks :)"))
     bot.sendMessage(chat_id, translate(lang, "FINISHED"), reply_to_message_id=msg)
     delete(chat_id)
 def Audio(audio, chat_id, lang):
@@ -468,14 +468,14 @@ def start1(msg):
     except KeyError:
        msg['from'] = {"language_code": "en"}
     if content_type == "text" and msg['text'] == "/start":
-     bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Welcome to @DeezloaderRMX_bot"))
+     bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Welcome to @musichuntersrobot"))
      bot.sendPhoto(chat_id, open("example.jpg", "rb"), caption="The bot commands can find here")
      bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Please select between"))
      try:
         qualit[chat_id]
      except KeyError:
         qualit[chat_id] = "MP3_320"
-     bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Press for search songs or album\nP.S. Remember you can do this digiting @ in your keyboard and select DeezloaderRMX_bot"),
+     bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Press for search songs or album\nP.S. Remember you can do this digiting @ in your keyboard and select musichuntersrobot"),
                     reply_markup=InlineKeyboardMarkup(
                                      inline_keyboard=[
                                                 [InlineKeyboardButton(text="Search", switch_inline_query_current_chat="")]
@@ -516,14 +516,14 @@ def start2(msg):
     except KeyError:
        msg['from'] = {"language_code": "en"}
     if content_type == "text" and msg['text'] == "/start":
-     bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Welcome to @DeezloaderRMX_bot"))
+     bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Welcome to @musichuntersrobot"))
      bot.sendPhoto(chat_id, open("example.jpg", "rb"), caption=translate(msg['from']['language_code'], "The bot commands can find here"))
      bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Please select between"))
      try:
         qualit[chat_id]
      except KeyError:
         qualit[chat_id] = "MP3_320"
-     bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Press for search songs \nP.S. Remember you can do this digiting @ in your keyboard and select DeezloaderRMX_bot"),
+     bot.sendMessage(chat_id, translate(msg['from']['language_code'], "Press for search songs \nP.S. Remember you can do this digiting @ in your keyboard and select musichunters"),
                     reply_markup=InlineKeyboardMarkup(
                                      inline_keyboard=[
                                                 [InlineKeyboardButton(text="Search", switch_inline_query_current_chat="")]
